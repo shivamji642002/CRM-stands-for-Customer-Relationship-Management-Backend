@@ -1,6 +1,6 @@
 # Ticket Management System
 
-A comprehensive Spring Boot REST API for managing tickets with full CRUD operations, automatic date handling, and comprehensive API documentation.
+A comprehensive Spring Boot REST API for managing tickets with full CRUD operations, automatic date handling, and robust error handling.
 
 ## Features
 
@@ -8,7 +8,6 @@ A comprehensive Spring Boot REST API for managing tickets with full CRUD operati
 - ✅ **Automatic Date Setting**: Date is automatically set when creating tickets
 - ✅ **Input Validation**: Comprehensive validation with detailed error messages
 - ✅ **Error Handling**: Proper HTTP status codes and error responses
-- ✅ **API Documentation**: Complete Swagger/OpenAPI documentation
 - ✅ **MySQL Database**: Persistent data storage
 - ✅ **RESTful Design**: Standard REST API patterns
 
@@ -37,41 +36,6 @@ A comprehensive Spring Boot REST API for managing tickets with full CRUD operati
    mvn clean install
    mvn spring-boot:run
    ```
-
-## API Documentation
-
-The API documentation is automatically generated using Swagger/OpenAPI 3.0.
-
-### Accessing the Documentation
-
-Once the application is running, you can access the API documentation at:
-
-- **Swagger UI**: http://localhost:8080/swagger-ui.html
-- **OpenAPI JSON**: http://localhost:8080/api-docs
-
-### Documentation Features
-
-- **Interactive Testing**: Test API endpoints directly from the browser
-- **Request/Response Examples**: See example requests and responses
-- **Schema Documentation**: Detailed field descriptions and validation rules
-- **Error Responses**: Complete error response documentation
-- **Parameter Validation**: Clear parameter requirements and constraints
-- **Media Type Support**: Proper content negotiation documentation
-
-### API Overview
-
-The API provides the following endpoints:
-
-| Method | Endpoint | Description | Status Codes |
-|--------|----------|-------------|--------------|
-| POST | `/api/tickets` | Create a new ticket | 201, 400 |
-| GET | `/api/tickets` | Get all tickets | 200 |
-| GET | `/api/tickets/{id}` | Get ticket by ID | 200, 404 |
-| PUT | `/api/tickets/{id}` | Update a ticket | 200, 400, 404 |
-| DELETE | `/api/tickets/{id}` | Delete a ticket | 204, 404 |
-| GET | `/api/tickets/health` | Health check | 200 |
-| GET | `/api/tickets/test` | Test endpoint | 200 |
-| GET | `/api/tickets/db-test` | Database test | 200, 500 |
 
 ## API Endpoints
 

@@ -21,7 +21,7 @@ public class TicketService {
 
     public Ticket saveTicket(Ticket ticket) {
         try {
-            // dateCurrent will be automatically set by @PrePersist if null
+            // Only save the ticket, no subtask logic
             return ticketRepository.save(ticket);
         } catch (Exception e) {
             throw new RuntimeException("Failed to save ticket: " + e.getMessage(), e);
@@ -47,21 +47,19 @@ public class TicketService {
     public Ticket updateTicket(Long id, Ticket updatedTicket) {
         try {
             return ticketRepository.findById(id)
-                    .map(ticket -> {
-                        ticket.setTitleTicket(updatedTicket.getTitleTicket());
-                        ticket.setAssign(updatedTicket.getAssign());
-                        ticket.setStatus(updatedTicket.getStatus());
-                        ticket.setPriority(updatedTicket.getPriority());
-                        // Only update date if provided, otherwise keep existing
+                    .map(existingTicket -> {
+                        existingTicket.setTitleTicket(updatedTicket.getTitleTicket());
+                        existingTicket.setAssign(updatedTicket.getAssign());
+                        existingTicket.setStatus(updatedTicket.getStatus());
+                        existingTicket.setPriority(updatedTicket.getPriority());
                         if (updatedTicket.getDateCurrent() != null) {
-                            ticket.setDateCurrent(updatedTicket.getDateCurrent());
+                            existingTicket.setDateCurrent(updatedTicket.getDateCurrent());
                         }
-                        ticket.setSubTask(updatedTicket.getSubTask());
-                        return ticketRepository.save(ticket);
+                        existingTicket.setSubTask(updatedTicket.getSubTask());
+                        // Remove subTask and subTasks logic
+                        return ticketRepository.save(existingTicket);
                     })
                     .orElseThrow(() -> new TicketNotFoundException(id));
-        } catch (TicketNotFoundException e) {
-            throw e;
         } catch (Exception e) {
             throw new RuntimeException("Failed to update ticket: " + e.getMessage(), e);
         }
@@ -73,8 +71,6 @@ public class TicketService {
                 throw new TicketNotFoundException(id);
             }
             ticketRepository.deleteById(id);
-        } catch (TicketNotFoundException e) {
-            throw e;
         } catch (Exception e) {
             throw new RuntimeException("Failed to delete ticket: " + e.getMessage(), e);
         }

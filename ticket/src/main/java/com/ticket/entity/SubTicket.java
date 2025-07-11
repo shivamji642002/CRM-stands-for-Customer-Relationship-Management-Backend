@@ -1,28 +1,25 @@
 package com.ticket.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 import java.time.LocalDate;
-import java.util.List;
 
 @Entity
-@Table(name = "tickets")
+@Table(name = "subtickets")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Ticket {
-
+public class SubTicket {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long sno;
+    private Long id;
 
     @NotBlank(message = "Title is required")
     @Column(nullable = false)
-    private String titleTicket;
+    private String title;
 
     @NotBlank(message = "Assignee is required")
     @Column(nullable = false)
@@ -42,10 +39,9 @@ public class Ticket {
     @Column(columnDefinition = "TEXT")
     private String subTask;
 
-    // Remove subTasks and parent fields, add OneToMany to SubTicket
-    @OneToMany(mappedBy = "parentTicket")
-    @JsonIgnore
-    private List<SubTicket> subTickets;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "ticket_id")
+    private Ticket parentTicket;
 
     @PrePersist
     protected void onCreate() {
@@ -53,4 +49,4 @@ public class Ticket {
             dateCurrent = LocalDate.now();
         }
     }
-}
+} 
