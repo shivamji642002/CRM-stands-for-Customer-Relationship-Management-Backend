@@ -10,4 +10,6 @@ import java.util.List;
 @Repository
 public interface SubTicketRepository extends JpaRepository<SubTicket, Long> {
     List<SubTicket> findByParentTicket(Ticket parentTicket);
+    List<SubTicket> findByParentSubTicket(SubTicket parentSubTicket);
+
 } 

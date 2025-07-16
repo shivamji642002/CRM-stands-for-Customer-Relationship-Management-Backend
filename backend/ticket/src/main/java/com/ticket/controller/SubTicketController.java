@@ -66,4 +66,11 @@ public class SubTicketController {
             return ResponseEntity.notFound().build();
         }
     }
+
+    @GetMapping("/tree/{id}")
+    public ResponseEntity<SubTicket> getSubTicketTree(@PathVariable Long id) {
+        SubTicket fullTree = subTicketService.loadSubTicketHierarchy(id);
+        return ResponseEntity.ok(fullTree);
+    }
+
 } 

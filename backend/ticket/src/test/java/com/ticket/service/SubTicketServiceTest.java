@@ -192,6 +192,14 @@ class SubTicketServiceTest {
         verify(subTicketRepository, times(1)).save(subTicket);
     }
 
+    @Test
+    void testLoadSubTicketHierarchy_NotImplemented() {
+        Long subTicketId = 1L;
+        assertThrows(UnsupportedOperationException.class, () -> {
+            subTicketService.loadSubTicketHierarchy(subTicketId);
+        });
+    }
+
     private Ticket createSampleTicket() {
         Ticket ticket = new Ticket();
         ticket.setSno(1L);
