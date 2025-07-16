@@ -1,184 +1,9 @@
-<!-- src/app/ticket-panel/ticket-panel.component.html -->
-<!-- <div class="container py-4" *ngIf="ticket; else loading">
-  <div class="card shadow rounded-3 border-0" style="border-color: #0dcaf0; box-shadow: 0 0 10px rgba(13, 202, 240, 0.4);">
-    <div class="card-body">
-
-      <div class="d-flex flex-wrap align-items-center mb-3 gap-2">
-        <span class="badge bg-secondary px-3 py-2 fs-6">Task</span>
-        <span class="text-muted small">#{{ ticket.id }}</span>
-        <button class="btn btn-sm btn-outline-primary ms-auto">
-          <i class="bi bi-robot me-1"></i> Ask AI
-        </button>
-      </div>
-
-      <h4 class="fw-semibold mb-3 bg-info-subtle text-info p-2 rounded-1">
-  <i class="bi bi-ticket-perforated-fill me-2 text-warning"></i>
-  {{ ticket.title }}
-</h4> -->
-
-
-
-
-<!-- Additional info display (optional) -->
-<!-- <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 gy-3 mb-4">
-        <div>
-          <div class="text-muted small">Status</div>
-          <button class="btn btn-outline-secondary btn-sm w-100">
-            {{ ticket.status || 'Mark Complete' }}
-          </button>
-        </div>
-        <div>
-          <div class="text-muted small">Assignee</div>
-          <span class="fw-medium">{{ ticket.assignee || 'Empty' }}</span>
-        </div>
-        <div>
-          <div class="text-muted small">Priority</div>
-          <span class="fw-medium">{{ ticket.priority || 'Empty' }}</span>
-        </div>
-        <div>
-          <div class="text-muted small">Date</div>
-          <span class="fw-medium">{{ ticket.tags || 'Empty' }}</span>
-        </div>
-      </div> -->
-<!-- Include Bootstrap & Icons in index.html -->
-<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"> -->
-
-<!-- <div class="container py-4">
-  <div class="row row-cols-1 row-cols-md-2 g-4"> -->
-
-<!-- Left Column -->
-<!-- <div class="col">
-      <ul class="list-unstyled">
-        <li class="mb-3 d-flex align-items-center">
-          <i class="bi bi-circle-half me-2"></i>
-          <strong class="me-2">Status</strong>
-          <span class="badge bg-primary">INPROGRESS</span>
-          <i class="bi bi-check-circle-fill ms-2 text-muted"></i>
-        </li>
-
-        <li class="mb-3 d-flex align-items-center">
-          <i class="bi bi-calendar-event me-2"></i>
-          <strong class="me-2">Dates</strong>
-          <span class="text-muted">Start → Due</span>
-        </li>
-
-        <li class="mb-3 d-flex align-items-center">
-          <i class="bi bi-hourglass-split me-2"></i>
-          <strong class="me-2">Time Estimate</strong>
-          <span class="text-muted">Empty</span>
-        </li>
-
-        <li class="mb-3 d-flex align-items-center">
-          <i class="bi bi-stopwatch me-2"></i>
-          <strong class="me-2">Track Time</strong>
-          <span class="text-muted"><i class="bi bi-circle me-1"></i>Add time</span>
-        </li>
-
-        <li class="mb-3 d-flex align-items-center">
-          <i class="bi bi-diagram-3 me-2"></i>
-          <strong class="me-2">Relationships</strong>
-          <span class="text-muted">Empty</span>
-        </li>
-      </ul>
-    </div> -->
-
-<!-- Right Column -->
-<!-- <div class="col">
-      <ul class="list-unstyled">
-        <li class="mb-3 d-flex align-items-center">
-          <i class="bi bi-person-fill me-2"></i>
-          <strong class="me-2">Assignees</strong>
-          <div class="d-flex">
-            <span class="badge rounded-circle bg-warning text-white me-1">SP</span>
-            <span class="badge rounded-circle bg-warning text-white">RB</span>
-          </div>
-        </li>
-
-        <li class="mb-3 d-flex align-items-center">
-          <i class="bi bi-flag-fill text-danger me-2"></i>
-          <strong class="me-2">Priority</strong>
-          <span class="text-danger fw-bold">Urgent</span>
-        </li>
-
-        <li class="mb-3 d-flex align-items-center">
-          <i class="bi bi-lightning-charge me-2"></i>
-          <strong class="me-2">Sprint Points</strong>
-          <span class="text-muted">Empty</span>
-        </li>
-
-        <li class="mb-3 d-flex align-items-center">
-          <i class="bi bi-tag me-2"></i>
-          <strong class="me-2">Tags</strong>
-          <span class="text-muted">Empty</span>
-        </li>
-      </ul>
-    </div>
-  </div> -->
-
-<!-- Description Input -->
-<!-- <div class="border-top mt-3 pt-3">
-    <div class="mb-3">
-      <textarea class="form-control" placeholder="Add description" rows="3"></textarea>
-    </div>
-    <div class="d-flex align-items-center text-muted small">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/OpenAI_Logo.svg/120px-OpenAI_Logo.svg.png"
-           alt="AI" width="20" height="20" class="me-2">
-      Write with AI
-    </div>
-  </div> -->
-
-<!-- Custom Fields Section -->
-<!-- <div class="border-top mt-4 pt-3">
-    <h6 class="mb-2">Custom Fields</h6>
-    <button class="btn btn-sm btn-outline-secondary">
-      <i class="bi bi-plus"></i> Create Custom Field
-    </button>
-  </div>
-</div> -->
-
-<!-- ✅ Description box with auto-save -->
-<!-- <div class="mb-4">
-        <div class="d-flex justify-content-between align-items-center mb-2">
-          <label class="text-muted small mb-0">Instructions / Description</label>
-          <span *ngIf="saving" class="text-success small">
-            <i class="bi bi-check-circle-fill me-1"></i> Saving...
-          </span>
-        </div>
-        <textarea
-          class="form-control"
-          rows="4"
-          [(ngModel)]="ticket.description"
-          (ngModelChange)="onDescriptionChange()"
-          placeholder="Write instructions here..."></textarea>
-      </div> -->
-
-<!-- <button>subTicket</button> -->
-
-<!-- </div>
-  </div>
-</div> -->
-
-<!-- <ng-template #loading>
-  <div class="text-center my-5">
-    <div class="spinner-border text-primary" role="status"></div>
-    <p class="mt-3 text-muted">Loading ticket details...</p>
-  </div>
-</ng-template> -->
-
-
-
-
-
-
-
-
-<!-- 
 <div class="container py-4" *ngIf="ticket; else loading">
-  <div class="card shadow rounded-3 border-0"
-    style="border-color: #0dcaf0; box-shadow: 0 0 10px rgba(13, 202, 240, 0.4);">
+  <div
+    class="card shadow rounded-3 border-0"
+    style="border-color: #0dcaf0; box-shadow: 0 0 10px rgba(13, 202, 240, 0.4)"
+  >
     <div class="card-body">
-
       <div class="d-flex flex-wrap align-items-center mb-3 gap-2">
         <span class="badge bg-secondary px-3 py-2 fs-6">Task</span>
         <span class="text-muted small">#{{ ticket.id }}</span>
@@ -195,807 +20,225 @@
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 gy-3 mb-4">
         <div>
           <div class="text-muted small">Status</div>
-          <span class="fw-medium">{{ ticket.status || 'Mark Complete' }}</span>
+          <span class="fw-medium">{{ ticket.status || "Mark Complete" }}</span>
         </div>
         <div>
           <div class="text-muted small">Assignee</div>
-          <span class="fw-medium">{{ ticket.assignee || 'Empty' }}</span>
+          <span class="fw-medium">{{ ticket.assignee || "Empty" }}</span>
         </div>
         <div>
           <div class="text-muted small">Priority</div>
-          <span class="fw-medium">{{ ticket.priority || 'Empty' }}</span>
+          <span class="fw-medium">{{ ticket.priority || "Empty" }}</span>
         </div>
         <div>
           <div class="text-muted small">Date</div>
-          <span class="fw-medium">{{ ticket.date ? (ticket.date | date:'yyyy-MM-dd') : 'Empty' }}</span>
+          <span class="fw-medium">{{
+            ticket.date ? (ticket.date | date : "yyyy-MM-dd") : "Empty"
+          }}</span>
         </div>
       </div>
 
-      <div class="container py-4">
-        <div class="row row-cols-1 row-cols-md-2 g-4">
+      <div class="row">
+        <div class="col-md-8">
+          <ul class="list-unstyled">
+            <li class="mb-3 d-flex align-items-center">
+              <i class="bi bi-circle-half me-2"></i>
+              <strong class="me-2">Status</strong>
+              <span class="badge bg-primary">{{ ticket.status }}</span>
+              <i class="bi bi-check-circle-fill ms-2 text-muted"></i>
+            </li>
 
-          <div class="col">
-            <ul class="list-unstyled">
-              <li class="mb-3 d-flex align-items-center">
-                <i class="bi bi-circle-half me-2"></i>
-                <strong class="me-2">Status</strong>
-                <span class="badge bg-primary">{{ ticket.status }}</span>
-                <i class="bi bi-check-circle-fill ms-2 text-muted"></i>
-              </li>
+            <li class="mb-3 d-flex align-items-center">
+              <i class="bi bi-calendar-event me-2"></i>
+              <strong class="me-2">Dates</strong>
+              <span class="text-muted">{{
+                ticket.date ? (ticket.date | date : "yyyy-MM-dd") : "Empty"
+              }}</span>
+            </li>
 
-              <li class="mb-3 d-flex align-items-center">
-                <i class="bi bi-calendar-event me-2"></i>
-                <strong class="me-2">Dates</strong>
-                <span class="text-muted">{{ ticket.date ? (ticket.date | date:'yyyy-MM-dd') : 'Empty' }}</span>
-              </li>
+            <li class="mb-3 d-flex align-items-center">
+              <i class="bi bi-hourglass-split me-2"></i>
+              <strong class="me-2">Time Estimate</strong>
+              <span class="text-muted">Empty</span>
+            </li>
 
-              <li class="mb-3 d-flex align-items-center">
-                <i class="bi bi-hourglass-split me-2"></i>
-                <strong class="me-2">Time Estimate</strong>
-                <span class="text-muted">Empty</span>
-              </li>
+            <li class="mb-3 d-flex align-items-center">
+              <i class="bi bi-stopwatch me-2"></i>
+              <strong class="me-2">Track Time</strong>
+              <span class="text-muted"
+                ><i class="bi bi-circle me-1"></i>Add time</span
+              >
+            </li>
 
-              <li class="mb-3 d-flex align-items-center">
-                <i class="bi bi-stopwatch me-2"></i>
-                <strong class="me-2">Track Time</strong>
-                <span class="text-muted"><i class="bi bi-circle me-1"></i>Add time</span>
-              </li>
+            <li class="mb-3 d-flex align-items-center">
+              <i class="bi bi-diagram-3 me-2"></i>
+              <strong class="me-2">Relationships</strong>
+              <span class="text-muted">Empty</span>
+            </li>
+          </ul>
+        </div>
 
-              <li class="mb-3 d-flex align-items-center">
-                <i class="bi bi-diagram-3 me-2"></i>
-                <strong class="me-2">Relationships</strong>
-                <span class="text-muted">Empty</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="col">
-            <ul class="list-unstyled">
-              <li class="mb-3 d-flex align-items-center">
-                <i class="bi bi-person-fill me-2"></i>
-                <strong class="me-2">Assignees</strong>
-                <div class="d-flex">
-                  <span *ngIf="ticket.assignee" class="badge rounded-circle bg-warning text-white me-1">{{
-                    ticket.assignee.toString().slice(0,1).toUpperCase() }}</span>
-                  <span *ngIf="!ticket.assignee" class="text-muted">Empty</span>
-                </div>
-              </li>
-
-              <li class="mb-3 d-flex align-items-center">
-                <i class="bi bi-flag-fill text-danger me-2"></i>
-                <strong class="me-2">Priority</strong>
+        <div class="col-md-4">
+          <ul class="list-unstyled">
+            <li class="mb-3 d-flex align-items-center">
+              <i class="bi bi-person-fill me-2"></i>
+              <strong class="me-2">Assignees</strong>
+              <div class="d-flex">
                 <span
-                  [ngClass]="{'text-danger': ticket.priority === 'High', 'text-warning': ticket.priority === 'Medium', 'text-success': ticket.priority === 'Low'}"
-                  class="fw-bold">{{ ticket.priority }}</span>
-              </li>
-
-              <li class="mb-3 d-flex align-items-center">
-                <i class="bi bi-lightning-charge me-2"></i>
-                <strong class="me-2">Sprint Points</strong>
-                <span class="text-muted">Empty</span>
-              </li>
-
-              <li class="mb-3 d-flex align-items-center">
-                <i class="bi bi-tag me-2"></i>
-                <strong class="me-2">Tags</strong>
-                <span class="text-muted">Empty</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="border-top mt-3 pt-3">
-          <div class="d-flex justify-content-between align-items-center mb-2">
-            <label class="text-muted small mb-0">Instructions / Description</label>
-            <span *ngIf="saving" class="text-success small">
-              <i class="bi bi-check-circle-fill me-1"></i> Saving...
-            </span>
-          </div>
-          <div contenteditable="true" class="form-control" style="min-height: 150px; overflow-y: auto;"
-            [innerHTML]="ticket.description" (input)="onDescriptionInput($event)"
-            placeholder="Write instructions here...">
-          </div>
-          <div class="d-flex align-items-center text-muted small mt-2">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/OpenAI_Logo.svg/120px-OpenAI_Logo.svg.png"
-              alt="AI" width="20" height="20" class="me-2">
-            Write with AI
-          </div>
-        </div>
-
-        <div class="border-top mt-4 pt-3">
-          <h6 class="mb-3">Subtasks</h6>
-          <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Add a new subtask title"
-              [(ngModel)]="newSubTask.title">
-            <input type="text" class="form-control" placeholder="Assignee" [(ngModel)]="newSubTask.assign">
-            <select class="form-select" [(ngModel)]="newSubTask.status">
-              <option value="">Select Status</option>
-              <option value="Open">To Do</option>
-              <option value="In Progress">In Progress</option>
-              <option value="Closed">Completed</option>
-            </select>
-            <select class="form-select" [(ngModel)]="newSubTask.priority">
-              <option value="">Select Priority</option>
-              <option value="Low">Low</option>
-              <option value="Medium">Medium</option>
-              <option value="High">High</option>
-            </select>
-            <button class="btn btn-primary" (click)="createSubTicket()"
-              [disabled]="!newSubTask.title || !newSubTask.assign || !newSubTask.status || !newSubTask.priority">Add
-              Subtask</button>
-          </div>
-
-          <ul class="list-group">
-            <li class="list-group-item d-flex justify-content-between align-items-center"
-              *ngFor="let sub of subTickets">
-              <div>
-                <strong>{{ sub.title }}</strong> - Assignee: {{ sub.assign }} - Status: {{ sub.status }} - Priority: {{
-                sub.priority }} ({{ sub.dateCurrent | date:'yyyy-MM-dd' }})
-              </div>
-              <div>
-                <button class="btn btn-outline-warning btn-sm me-1" (click)="openEditSubTicketModal(sub)"
-                  title="Edit Subtask">
-                  <i class="bi bi-pencil"></i>
-                </button>
-                <button class="btn btn-outline-danger btn-sm" (click)="confirmDeleteSubTicket(sub.id)"
-                  title="Delete Subtask">
-                  <i class="bi bi-trash"></i>
-                </button>
+                  *ngIf="ticket.assignee"
+                  class="badge rounded-circle bg-warning text-white me-1"
+                  >{{
+                    ticket.assignee.toString().slice(0, 1).toUpperCase()
+                  }}</span
+                >
+                <span *ngIf="!ticket.assignee" class="text-muted">Empty</span>
               </div>
             </li>
-            <li *ngIf="subTickets.length === 0" class="list-group-item text-muted">No subtasks yet.</li>
+
+            <li class="mb-3 d-flex align-items-center">
+              <i class="bi bi-flag-fill text-danger me-2"></i>
+              <strong class="me-2">Priority</strong>
+              <span
+                [ngClass]="{
+                  'text-danger': ticket.priority === 'High',
+                  'text-warning': ticket.priority === 'Medium',
+                  'text-success': ticket.priority === 'Low'
+                }"
+                class="fw-bold"
+                >{{ ticket.priority }}</span
+              >
+            </li>
+
+            <li class="mb-3 d-flex align-items-center">
+              <i class="bi bi-lightning-charge me-2"></i>
+              <strong class="me-2">Sprint Points</strong>
+              <span class="text-muted">Empty</span>
+            </li>
+
+            <li class="mb-3 d-flex align-items-center">
+              <i class="bi bi-tag me-2"></i>
+              <strong class="me-2">Tags</strong>
+              <span class="text-muted">Empty</span>
+            </li>
           </ul>
         </div>
+      </div>
 
-        <div class="border-top mt-4 pt-3">
-          <h6 class="mb-2">Custom Fields</h6>
-          <button class="btn btn-sm btn-outline-secondary">
-            <i class="bi bi-plus"></i> Create Custom Field
+      <ul class="nav nav-tabs mt-4" id="ticketDetailTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="description-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#description"
+            type="button"
+            role="tab"
+            aria-controls="description"
+            aria-selected="true"
+          >
+            Description
           </button>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<ng-template #loading>
-  <div class="text-center my-5">
-    <div class="spinner-border text-primary" role="status"></div>
-    <p class="mt-3 text-muted">Loading ticket details...</p>
-  </div>
-</ng-template>
-
-<div class="modal fade" id="editSubTicketModal" tabindex="-1" aria-labelledby="editSubTicketModalLabel"
-  aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content border-0 rounded-3 shadow">
-      <div class="modal-header bg-primary text-white">
-        <h5 class="modal-title" id="editSubTicketModalLabel">Edit Subticket</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="row g-3">
-          <div class="col-md-6">
-            <label class="form-label">Title</label>
-            <input [(ngModel)]="editingSubTask.title" class="form-control form-control-sm" />
-          </div>
-          <div class="col-md-6">
-            <label class="form-label">Assignee</label>
-            <input [(ngModel)]="editingSubTask.assign" class="form-control form-control-sm" />
-          </div>
-          <div class="col-md-6">
-            <label class="form-label">Status</label>
-            <select [(ngModel)]="editingSubTask.status" class="form-select form-select-sm">
-              <option value="Open">To Do</option>
-              <option value="In Progress">In Progress</option>
-              <option value="Closed">Completed</option>
-            </select>
-          </div>
-          <div class="col-md-6">
-            <label class="form-label">Priority</label>
-            <select [(ngModel)]="editingSubTask.priority" class="form-select form-select-sm">
-              <option value="Low">Low</option>
-              <option value="Medium">Medium</option>
-              <option value="High">High</option>
-            </select>
-          </div>
-          <div class="col-md-6">
-            <label class="form-label">Date</label>
-            <input type="date" [(ngModel)]="editingSubTask.dateCurrent" class="form-control form-control-sm" />
-          </div>
-          <div class="col-md-12">
-            <label class="form-label">Description</label>
-            <textarea [(ngModel)]="editingSubTask.description" rows="2" class="form-control form-control-sm"></textarea>
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
-        <button class="btn btn-primary btn-sm" (click)="updateSubTicket()" data-bs-dismiss="modal">Update</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="deleteSubTicketConfirmModal" tabindex="-1"
-  aria-labelledby="deleteSubTicketConfirmModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content border-0 rounded-3 shadow">
-      <div class="modal-header bg-danger text-white">
-        <h5 class="modal-title" id="deleteSubTicketConfirmModalLabel">Confirm Deletion</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body text-center">
-        <i class="bi bi-exclamation-triangle fs-2 text-warning"></i>
-        <p class="mt-3 mb-0">Are you sure you want to delete this subtask?</p>
-      </div>
-      <div class="modal-footer justify-content-center">
-        <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
-        <button class="btn btn-danger btn-sm" (click)="deleteSubTicket()" data-bs-dismiss="modal">Delete</button>
-      </div>
-    </div>
-  </div>
-</div> -->
-
-
-
-
-
-
-
-
-
-
-
-<!-- 
-<div class="container py-4" *ngIf="ticket; else loading">
-  <div class="card shadow rounded-3 border-0"
-    style="border-color: #0dcaf0; box-shadow: 0 0 10px rgba(13, 202, 240, 0.4);">
-    <div class="card-body">
-
-      <div class="d-flex flex-wrap align-items-center mb-3 gap-2">
-        <span class="badge bg-secondary px-3 py-2 fs-6">Task</span>
-        <span class="text-muted small">#{{ ticket.id }}</span>
-        <button class="btn btn-sm btn-outline-primary ms-auto">
-          <i class="bi bi-robot me-1"></i> Ask AI
-        </button>
-      </div>
-
-      <h4 class="fw-semibold mb-3 bg-info-subtle text-info p-2 rounded-1">
-        <i class="bi bi-ticket-perforated-fill me-2 text-warning"></i>
-        {{ ticket.title }}
-      </h4>
-
-      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 gy-3 mb-4">
-        <div>
-          <div class="text-muted small">Status</div>
-          <span class="fw-medium">{{ ticket.status || 'Mark Complete' }}</span>
-        </div>
-        <div>
-          <div class="text-muted small">Assignee</div>
-          <span class="fw-medium">{{ ticket.assignee || 'Empty' }}</span>
-        </div>
-        <div>
-          <div class="text-muted small">Priority</div>
-          <span class="fw-medium">{{ ticket.priority || 'Empty' }}</span>
-        </div>
-        <div>
-          <div class="text-muted small">Date</div>
-          <span class="fw-medium">{{ ticket.date ? (ticket.date | date:'yyyy-MM-dd') : 'Empty' }}</span>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-8">
-          <ul class="list-unstyled">
-            <li class="mb-3 d-flex align-items-center">
-              <i class="bi bi-circle-half me-2"></i>
-              <strong class="me-2">Status</strong>
-              <span class="badge bg-primary">{{ ticket.status }}</span>
-              <i class="bi bi-check-circle-fill ms-2 text-muted"></i>
-            </li>
-
-            <li class="mb-3 d-flex align-items-center">
-              <i class="bi bi-calendar-event me-2"></i>
-              <strong class="me-2">Dates</strong>
-              <span class="text-muted">{{ ticket.date ? (ticket.date | date:'yyyy-MM-dd') : 'Empty' }}</span>
-            </li>
-
-            <li class="mb-3 d-flex align-items-center">
-              <i class="bi bi-hourglass-split me-2"></i>
-              <strong class="me-2">Time Estimate</strong>
-              <span class="text-muted">Empty</span>
-            </li>
-
-            <li class="mb-3 d-flex align-items-center">
-              <i class="bi bi-stopwatch me-2"></i>
-              <strong class="me-2">Track Time</strong>
-              <span class="text-muted"><i class="bi bi-circle me-1"></i>Add time</span>
-            </li>
-
-            <li class="mb-3 d-flex align-items-center">
-              <i class="bi bi-diagram-3 me-2"></i>
-              <strong class="me-2">Relationships</strong>
-              <span class="text-muted">Empty</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="col-md-4">
-          <ul class="list-unstyled">
-            <li class="mb-3 d-flex align-items-center">
-              <i class="bi bi-person-fill me-2"></i>
-              <strong class="me-2">Assignees</strong>
-              <div class="d-flex">
-                <span *ngIf="ticket.assignee" class="badge rounded-circle bg-warning text-white me-1">{{
-                  ticket.assignee.toString().slice(0,1).toUpperCase() }}</span>
-                <span *ngIf="!ticket.assignee" class="text-muted">Empty</span>
-              </div>
-            </li>
-
-            <li class="mb-3 d-flex align-items-center">
-              <i class="bi bi-flag-fill text-danger me-2"></i>
-              <strong class="me-2">Priority</strong>
-              <span
-                [ngClass]="{'text-danger': ticket.priority === 'High', 'text-warning': ticket.priority === 'Medium', 'text-success': ticket.priority === 'Low'}"
-                class="fw-bold">{{ ticket.priority }}</span>
-            </li>
-
-            <li class="mb-3 d-flex align-items-center">
-              <i class="bi bi-lightning-charge me-2"></i>
-              <strong class="me-2">Sprint Points</strong>
-              <span class="text-muted">Empty</span>
-            </li>
-
-            <li class="mb-3 d-flex align-items-center">
-              <i class="bi bi-tag me-2"></i>
-              <strong class="me-2">Tags</strong>
-              <span class="text-muted">Empty</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <ul class="nav nav-tabs mt-4" id="ticketDetailTabs" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description"
-            type="button" role="tab" aria-controls="description" aria-selected="true">Description</button>
         </li>
         <li class="nav-item" role="presentation">
-          <button class="nav-link" id="subtasks-tab" data-bs-toggle="tab" data-bs-target="#subtasks" type="button"
-            role="tab" aria-controls="subtasks" aria-selected="false">Subtasks</button>
+          <button
+            class="nav-link"
+            id="subtasks-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#subtasks"
+            type="button"
+            role="tab"
+            aria-controls="subtasks"
+            aria-selected="false"
+          >
+            Subtasks
+          </button>
         </li>
         <li class="nav-item" role="presentation">
-          <button class="nav-link" id="links-tab" data-bs-toggle="tab" data-bs-target="#links" type="button" role="tab"
-            aria-controls="links" aria-selected="false">Links & Relationships</button>
+          <button
+            class="nav-link"
+            id="links-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#links"
+            type="button"
+            role="tab"
+            aria-controls="links"
+            aria-selected="false"
+          >
+            Links & Relationships
+          </button>
         </li>
       </ul>
 
       <div class="tab-content pt-3" id="ticketDetailTabsContent">
-        <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
+        <div
+          class="tab-pane fade show active"
+          id="description"
+          role="tabpanel"
+          aria-labelledby="description-tab"
+        >
           <div class="d-flex justify-content-between align-items-center mb-2">
-            <label class="text-muted small mb-0">Instructions / Description</label>
+            <label class="text-muted small mb-0"
+              >Instructions / Description</label
+            >
             <span *ngIf="saving" class="text-success small">
               <i class="bi bi-check-circle-fill me-1"></i> Saving...
             </span>
           </div>
-          <quill-editor [(ngModel)]="ticket.description" (onContentChanged)="onContentChanged($event)"
-            [styles]="{'min-height': '150px', 'background-color': '#f8f9fa', 'border': '1px solid #ced4da', 'border-radius': '0.25rem'}">
+          <quill-editor
+            [(ngModel)]="ticket.description"
+            (onContentChanged)="onContentChanged($event)"
+            [styles]="{
+              height: '500px',
+              width: '100%',
+              overflow: 'auto',
+              backgroundColor: '#f8f9fa',
+              border: '1px solid #ced4da',
+              borderRadius: '0.25rem'
+            }"
+          >
           </quill-editor>
 
-          <div class="d-flex align-items-center text-muted small mt-2">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/OpenAI_Logo.svg/120px-OpenAI_Logo.svg.png"
-              alt="AI" width="20" height="20" class="me-2">
-            Write with AI
-          </div>
-        </div>
-
-        <div class="tab-pane fade" id="subtasks" role="tabpanel" aria-labelledby="subtasks-tab">
-          <h6 class="mb-3">Subtasks</h6>
-          <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Add a new subtask title"
-              [(ngModel)]="newSubTask.title">
-            <input type="text" class="form-control" placeholder="Assignee" [(ngModel)]="newSubTask.assign">
-            <select class="form-select" [(ngModel)]="newSubTask.status">
-              <option value="">Select Status</option>
-              <option value="Open">To Do</option>
-              <option value="In Progress">In Progress</option>
-              <option value="Closed">Completed</option>
-            </select>
-            <select class="form-select" [(ngModel)]="newSubTask.priority">
-              <option value="">Select Priority</option>
-              <option value="Low">Low</option>
-              <option value="Medium">Medium</option>
-              <option value="High">High</option>
-            </select>
-            <button class="btn btn-primary" (click)="createSubTicket()"
-              [disabled]="!newSubTask.title || !newSubTask.assign || !newSubTask.status || !newSubTask.priority">Add
-              Subtask</button>
-          </div>
-
-          <ul class="list-group">
-            <li class="list-group-item d-flex justify-content-between align-items-center"
-              *ngFor="let sub of subTickets">
-              <div>
-                <strong>{{ sub.title }}</strong> - Assignee: {{ sub.assign }} - Status: {{ sub.status }} - Priority: {{
-                sub.priority }} ({{ sub.dateCurrent | date:'yyyy-MM-dd' }})
-              </div>
-              <div>
-                <button class="btn btn-outline-warning btn-sm me-1" (click)="openEditSubTicketModal(sub)"
-                  title="Edit Subtask">
-                  <i class="bi bi-pencil"></i>
-                </button>
-                <button class="btn btn-outline-danger btn-sm" (click)="confirmDeleteSubTicket(sub.id)"
-                  title="Delete Subtask">
-                  <i class="bi bi-trash"></i>
-                </button>
-              </div>
-            </li>
-            <li *ngIf="subTickets.length === 0" class="list-group-item text-muted">No subtasks yet.</li>
-          </ul>
-        </div>
-
-        <div class="tab-pane fade" id="links" role="tabpanel" aria-labelledby="links-tab">
-          <h5>External Links</h5>
-          <div class="input-group mb-3">
-            <input type="url" class="form-control" placeholder="e.g., https://docs.google.com/..."
-              [(ngModel)]="newLink.url">
-            <input type="text" class="form-control" placeholder="Description (Optional)"
-              [(ngModel)]="newLink.description">
-            <button class="btn btn-primary" (click)="addLink()" [disabled]="!newLink.url">Add Link</button>
-          </div>
-          <ul class="list-group mb-4">
-            <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let link of links">
-              <div>
-                <a [href]="link.url" target="_blank" class="fw-semibold text-decoration-none">{{ link.url }}</a>
-                <p *ngIf="link.description" class="text-muted small mb-0">{{ link.description }}</p>
-              </div>
-              <button class="btn btn-outline-danger btn-sm" (click)="confirmDeleteLink(link.id)" title="Remove Link">
-                <i class="bi bi-trash"></i>
-              </button>
-            </li>
-            <li *ngIf="links.length === 0" class="list-group-item text-muted">No links added yet.</li>
-          </ul>
-
-          <h5>Relationships to other Tickets</h5>
-          <div class="mb-3">
-            <label class="form-label">Relationship Type</label>
-            <select class="form-select mb-2" [(ngModel)]="newRelationship.type">
-              <option value="">Select Type</option>
-              <option *ngFor="let type of relationshipTypes" [value]="type">{{ type }}</option>
-            </select>
-
-            <label class="form-label">Target Ticket</label>
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Search by title or ID"
-                [(ngModel)]="searchTargetTicketQuery" (ngModelChange)="searchTickets()">
-              <button class="btn btn-secondary" [disabled]="!selectedTargetTicket"
-                (click)="selectedTargetTicket = null; searchTargetTicketQuery = ''">Clear</button>
-            </div>
-            <div class="list-group mt-1" *ngIf="searchTicketResults.length > 0">
-              <button type="button" class="list-group-item list-group-item-action"
-                *ngFor="let result of searchTicketResults" (click)="selectTargetTicket(result)">
-                #{{ result.sno }} - {{ result.titleTicket }}
-              </button>
-            </div>
-            <p *ngIf="selectedTargetTicket" class="text-success small mt-2">Selected: #{{ selectedTargetTicket.sno }} -
-              {{ selectedTargetTicket.titleTicket }}</p>
-          </div>
-
-          <button class="btn btn-primary mb-3" (click)="addRelationship()"
-            [disabled]="!newRelationship.type || !selectedTargetTicket">Add Relationship</button>
-
-          <ul class="list-group">
-            <li class="list-group-item d-flex justify-content-between align-items-center"
-              *ngFor="let rel of relationships">
-              <div>
-                <strong>{{ rel.type }}</strong> &nbsp;
-                <a [routerLink]="['/ticket', rel.targetTicket.sno]"
-                  class="fw-semibold text-decoration-none text-primary">
-                  #{{ rel.targetTicket.sno }} - {{ rel.targetTicketTitle }}
-                </a>
-              </div>
-              <button class="btn btn-outline-danger btn-sm" (click)="confirmDeleteRelationship(rel.id)"
-                title="Remove Relationship">
-                <i class="bi bi-trash"></i>
-              </button>
-            </li>
-            <li *ngIf="relationships.length === 0" class="list-group-item text-muted">No relationships added yet.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="border-top mt-4 pt-3">
-        <h6 class="mb-2">Custom Fields</h6>
-        <button class="btn btn-sm btn-outline-secondary">
-          <i class="bi bi-plus"></i> Create Custom Field
-        </button>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<ng-template #loading>
-  <div class="text-center my-5">
-    <div class="spinner-border text-primary" role="status"></div>
-    <p class="mt-3 text-muted">Loading ticket details...</p>
-  </div>
-</ng-template>
-
-<div class="modal fade" id="editSubTicketModal" tabindex="-1" aria-labelledby="editSubTicketModalLabel"
-  aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content border-0 rounded-3 shadow">
-      <div class="modal-header bg-primary text-white">
-        <h5 class="modal-title" id="editSubTicketModalLabel">Edit Subticket</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="row g-3">
-          <div class="col-md-6">
-            <label class="form-label">Title</label>
-            <input [(ngModel)]="editingSubTask.title" class="form-control form-control-sm" />
-          </div>
-          <div class="col-md-6">
-            <label class="form-label">Assignee</label>
-            <input [(ngModel)]="editingSubTask.assign" class="form-control form-control-sm" />
-          </div>
-          <div class="col-md-6">
-            <label class="form-label">Status</label>
-            <select [(ngModel)]="editingSubTask.status" class="form-select form-select-sm">
-              <option value="Open">To Do</option>
-              <option value="In Progress">In Progress</option>
-              <option value="Closed">Completed</option>
-            </select>
-          </div>
-          <div class="col-md-6">
-            <label class="form-label">Priority</label>
-            <select [(ngModel)]="editingSubTask.priority" class="form-select form-select-sm">
-              <option value="Low">Low</option>
-              <option value="Medium">Medium</option>
-              <option value="High">High</option>
-            </select>
-          </div>
-          <div class="col-md-6">
-            <label class="form-label">Date</label>
-            <input type="date" [(ngModel)]="editingSubTask.dateCurrent" class="form-control form-control-sm" />
-          </div>
-          <div class="col-md-12">
-            <label class="form-label">Description</label>
-            <textarea [(ngModel)]="editingSubTask.description" rows="2" class="form-control form-control-sm"></textarea>
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
-        <button class="btn btn-primary btn-sm" (click)="updateSubTicket()" data-bs-dismiss="modal">Update</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="deleteSubTicketConfirmModal" tabindex="-1"
-  aria-labelledby="deleteSubTicketConfirmModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content border-0 rounded-3 shadow">
-      <div class="modal-header bg-danger text-white">
-        <h5 class="modal-title" id="deleteSubTicketConfirmModalLabel">Confirm Deletion</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body text-center">
-        <i class="bi bi-exclamation-triangle fs-2 text-warning"></i>
-        <p class="mt-3 mb-0">Are you sure you want to delete this subtask?</p>
-      </div>
-      <div class="modal-footer justify-content-center">
-        <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
-        <button class="btn btn-danger btn-sm" (click)="deleteSubTicket()" data-bs-dismiss="modal">Delete</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="deleteLinkConfirmModal" tabindex="-1" aria-labelledby="deleteLinkConfirmModalLabel"
-  aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content border-0 rounded-3 shadow">
-      <div class="modal-header bg-danger text-white">
-        <h5 class="modal-title" id="deleteLinkConfirmModalLabel">Confirm Link Deletion</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body text-center">
-        <i class="bi bi-exclamation-triangle fs-2 text-warning"></i>
-        <p class="mt-3 mb-0">Are you sure you want to delete this link?</p>
-      </div>
-      <div class="modal-footer justify-content-center">
-        <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
-        <button class="btn btn-danger btn-sm" (click)="deleteLink()" data-bs-dismiss="modal">Delete</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="deleteRelationshipConfirmModal" tabindex="-1"
-  aria-labelledby="deleteRelationshipConfirmModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content border-0 rounded-3 shadow">
-      <div class="modal-header bg-danger text-white">
-        <h5 class="modal-title" id="deleteRelationshipConfirmModalLabel">Confirm Relationship Deletion</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body text-center">
-        <i class="bi bi-exclamation-triangle fs-2 text-warning"></i>
-        <p class="mt-3 mb-0">Are you sure you want to delete this relationship?</p>
-      </div>
-      <div class="modal-footer justify-content-center">
-        <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
-        <button class="btn btn-danger btn-sm" (click)="deleteRelationship()" data-bs-dismiss="modal">Delete</button>
-      </div>
-    </div>
-  </div>
-</div> -->
-
-
-
-
-<div class="container py-4" *ngIf="ticket; else loading">
-  <div class="card shadow rounded-3 border-0"
-    style="border-color: #0dcaf0; box-shadow: 0 0 10px rgba(13, 202, 240, 0.4);">
-    <div class="card-body">
-
-      <div class="d-flex flex-wrap align-items-center mb-3 gap-2">
-        <span class="badge bg-secondary px-3 py-2 fs-6">Task</span>
-        <span class="text-muted small">#{{ ticket.id }}</span>
-        <button class="btn btn-sm btn-outline-primary ms-auto">
-          <i class="bi bi-robot me-1"></i> Ask AI
-        </button>
-      </div>
-
-      <h4 class="fw-semibold mb-3 bg-info-subtle text-info p-2 rounded-1">
-        <i class="bi bi-ticket-perforated-fill me-2 text-warning"></i>
-        {{ ticket.title }}
-      </h4>
-
-      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 gy-3 mb-4">
-        <div>
-          <div class="text-muted small">Status</div>
-          <span class="fw-medium">{{ ticket.status || 'Mark Complete' }}</span>
-        </div>
-        <div>
-          <div class="text-muted small">Assignee</div>
-          <span class="fw-medium">{{ ticket.assignee || 'Empty' }}</span>
-        </div>
-        <div>
-          <div class="text-muted small">Priority</div>
-          <span class="fw-medium">{{ ticket.priority || 'Empty' }}</span>
-        </div>
-        <div>
-          <div class="text-muted small">Date</div>
-          <span class="fw-medium">{{ ticket.date ? (ticket.date | date:'yyyy-MM-dd') : 'Empty' }}</span>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-8">
-          <ul class="list-unstyled">
-            <li class="mb-3 d-flex align-items-center">
-              <i class="bi bi-circle-half me-2"></i>
-              <strong class="me-2">Status</strong>
-              <span class="badge bg-primary">{{ ticket.status }}</span>
-              <i class="bi bi-check-circle-fill ms-2 text-muted"></i>
-            </li>
-
-            <li class="mb-3 d-flex align-items-center">
-              <i class="bi bi-calendar-event me-2"></i>
-              <strong class="me-2">Dates</strong>
-              <span class="text-muted">{{ ticket.date ? (ticket.date | date:'yyyy-MM-dd') : 'Empty' }}</span>
-            </li>
-
-            <li class="mb-3 d-flex align-items-center">
-              <i class="bi bi-hourglass-split me-2"></i>
-              <strong class="me-2">Time Estimate</strong>
-              <span class="text-muted">Empty</span>
-            </li>
-
-            <li class="mb-3 d-flex align-items-center">
-              <i class="bi bi-stopwatch me-2"></i>
-              <strong class="me-2">Track Time</strong>
-              <span class="text-muted"><i class="bi bi-circle me-1"></i>Add time</span>
-            </li>
-
-            <li class="mb-3 d-flex align-items-center">
-              <i class="bi bi-diagram-3 me-2"></i>
-              <strong class="me-2">Relationships</strong>
-              <span class="text-muted">Empty</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="col-md-4">
-          <ul class="list-unstyled">
-            <li class="mb-3 d-flex align-items-center">
-              <i class="bi bi-person-fill me-2"></i>
-              <strong class="me-2">Assignees</strong>
-              <div class="d-flex">
-                <span *ngIf="ticket.assignee" class="badge rounded-circle bg-warning text-white me-1">{{
-                  ticket.assignee.toString().slice(0,1).toUpperCase() }}</span>
-                <span *ngIf="!ticket.assignee" class="text-muted">Empty</span>
-              </div>
-            </li>
-
-            <li class="mb-3 d-flex align-items-center">
-              <i class="bi bi-flag-fill text-danger me-2"></i>
-              <strong class="me-2">Priority</strong>
-              <span
-                [ngClass]="{'text-danger': ticket.priority === 'High', 'text-warning': ticket.priority === 'Medium', 'text-success': ticket.priority === 'Low'}"
-                class="fw-bold">{{ ticket.priority }}</span>
-            </li>
-
-            <li class="mb-3 d-flex align-items-center">
-              <i class="bi bi-lightning-charge me-2"></i>
-              <strong class="me-2">Sprint Points</strong>
-              <span class="text-muted">Empty</span>
-            </li>
-
-            <li class="mb-3 d-flex align-items-center">
-              <i class="bi bi-tag me-2"></i>
-              <strong class="me-2">Tags</strong>
-              <span class="text-muted">Empty</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <ul class="nav nav-tabs mt-4" id="ticketDetailTabs" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description"
-            type="button" role="tab" aria-controls="description" aria-selected="true">Description</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="subtasks-tab" data-bs-toggle="tab" data-bs-target="#subtasks" type="button"
-            role="tab" aria-controls="subtasks" aria-selected="false">Subtasks</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="links-tab" data-bs-toggle="tab" data-bs-target="#links" type="button" role="tab"
-            aria-controls="links" aria-selected="false">Links & Relationships</button>
-        </li>
-      </ul>
-
-      <div class="tab-content pt-3" id="ticketDetailTabsContent">
-        <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
-          <div class="d-flex justify-content-between align-items-center mb-2">
-            <label class="text-muted small mb-0">Instructions / Description</label>
-            <span *ngIf="saving" class="text-success small">
-              <i class="bi bi-check-circle-fill me-1"></i> Saving...
-            </span>
-          </div>
-          <quill-editor [(ngModel)]="ticket.description" (onContentChanged)="onContentChanged($event)"
-            [styles]="{'min-height': '150px', 'background-color': '#f8f9fa', 'border': '1px solid #ced4da', 'border-radius': '0.25rem'}">
-          </quill-editor>
-
-          <div class="d-flex align-items-center justify-content-between text-muted small mt-2">
-            <div class="d-flex align-items-center">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/OpenAI_Logo.svg/120px-OpenAI_Logo.svg.png"
-                alt="AI" width="20" height="20" class="me-2">
-              Write with AI
-            </div>
+          <div
+            class="d-flex align-items-center justify-content-between text-muted small mt-2"
+          >
+            <div class="d-flex align-items-center"></div>
             <div class="d-flex gap-2">
-              <button class="btn btn-sm btn-outline-secondary" (click)="downloadPdf()">Download PDF</button>
-              <button class="btn btn-sm btn-outline-secondary" (click)="downloadDocx()">Download DOCX</button>
+              <button
+                class="btn btn-sm btn-outline-secondary"
+                (click)="downloadPdf()"
+              >
+                Download PDF
+              </button>
+              <button
+                class="btn btn-sm btn-outline-secondary"
+                (click)="downloadDocx()"
+              >
+                Download DOCX
+              </button>
             </div>
           </div>
         </div>
 
-        <div class="tab-pane fade" id="subtasks" role="tabpanel" aria-labelledby="subtasks-tab">
+        <div
+          class="tab-pane fade"
+          id="subtasks"
+          role="tabpanel"
+          aria-labelledby="subtasks-tab"
+        >
           <h6 class="mb-3">Subtasks</h6>
           <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Add a new subtask title"
-              [(ngModel)]="newSubTask.title">
-            <input type="text" class="form-control" placeholder="Assignee" [(ngModel)]="newSubTask.assign">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Add a new subtask title"
+              [(ngModel)]="newSubTask.title"
+            />
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Assignee"
+              [(ngModel)]="newSubTask.assign"
+            />
             <select class="form-select" [(ngModel)]="newSubTask.status">
               <option value="">Select Status</option>
               <option value="Open">To Do</option>
@@ -1008,53 +251,123 @@
               <option value="Medium">Medium</option>
               <option value="High">High</option>
             </select>
-            <button class="btn btn-primary" (click)="createSubTicket()"
-              [disabled]="!newSubTask.title || !newSubTask.assign || !newSubTask.status || !newSubTask.priority">Add
-              Subtask</button>
+            <button
+              class="btn btn-primary"
+              (click)="createSubTicket()"
+              [disabled]="
+                !newSubTask.title ||
+                !newSubTask.assign ||
+                !newSubTask.status ||
+                !newSubTask.priority
+              "
+            >
+              Add Subtask
+            </button>
           </div>
 
-          <ul class="list-group">
-            <li class="list-group-item d-flex justify-content-between align-items-center"
-              *ngFor="let sub of subTickets">
-              <div>
-                <strong>{{ sub.title }}</strong> - Assignee: {{ sub.assign }} - Status: {{ sub.status }} - Priority: {{
-                sub.priority }} ({{ sub.dateCurrent | date:'yyyy-MM-dd' }})
-              </div>
-              <div>
-                <button class="btn btn-outline-warning btn-sm me-1" (click)="openEditSubTicketModal(sub)"
-                  title="Edit Subtask">
-                  <i class="bi bi-pencil"></i>
-                </button>
-                <button class="btn btn-outline-danger btn-sm" (click)="confirmDeleteSubTicket(sub.id)"
-                  title="Delete Subtask">
-                  <i class="bi bi-trash"></i>
-                </button>
-              </div>
-            </li>
-            <li *ngIf="subTickets.length === 0" class="list-group-item text-muted">No subtasks yet.</li>
-          </ul>
+          <table class="table table-bordered table-hover table-sm">
+            <thead class="table-light">
+              <tr>
+                <th>Title</th>
+                <th>Assignee</th>
+                <th>Status</th>
+                <th>Priority</th>
+                <th>Date</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let sub of subTickets">
+                <td>
+                  <a [routerLink]="['/subtask', sub.id]">
+                    {{ sub.title }}
+                  </a>
+                </td>
+                <td>{{ sub.assign }}</td>
+                <td>{{ sub.status }}</td>
+                <td>{{ sub.priority }}</td>
+                <td>{{ sub.dateCurrent | date : "yyyy-MM-dd" }}</td>
+                <td>
+                  <button
+                    class="btn btn-outline-warning btn-sm me-1"
+                    (click)="openEditSubTicketModal(sub)"
+                    title="Edit Subtask"
+                  >
+                    <i class="bi bi-pencil"></i>
+                  </button>
+                  <button
+                    class="btn btn-outline-danger btn-sm"
+                    (click)="confirmDeleteSubTicket(sub.id)"
+                    title="Delete Subtask"
+                  >
+                    <i class="bi bi-trash"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr *ngIf="subTickets.length === 0">
+                <td colspan="6" class="text-center text-muted">
+                  No subtasks yet.
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
-        <div class="tab-pane fade" id="links" role="tabpanel" aria-labelledby="links-tab">
+        <div
+          class="tab-pane fade"
+          id="links"
+          role="tabpanel"
+          aria-labelledby="links-tab"
+        >
           <h5>External Links</h5>
           <div class="input-group mb-3">
-            <input type="url" class="form-control" placeholder="e.g., https://docs.google.com/..."
-              [(ngModel)]="newLink.url">
-            <input type="text" class="form-control" placeholder="Description (Optional)"
-              [(ngModel)]="newLink.description">
-            <button class="btn btn-primary" (click)="addLink()" [disabled]="!newLink.url">Add Link</button>
+            <input
+              type="url"
+              class="form-control"
+              placeholder="e.g., https://docs.google.com/..."
+              [(ngModel)]="newLink.url"
+            />
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Description (Optional)"
+              [(ngModel)]="newLink.description"
+            />
+            <button
+              class="btn btn-primary"
+              (click)="addLink()"
+              [disabled]="!newLink.url"
+            >
+              Add Link
+            </button>
           </div>
           <ul class="list-group mb-4">
-            <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let link of links">
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center"
+              *ngFor="let link of links"
+            >
               <div>
-                <a [href]="link.url" target="_blank" class="fw-semibold text-decoration-none">{{ link.url }}</a>
-                <p *ngIf="link.description" class="text-muted small mb-0">{{ link.description }}</p>
+                <a
+                  [href]="link.url"
+                  target="_blank"
+                  class="fw-semibold text-decoration-none"
+                  >{{ link.url }}</a
+                >
+                <p *ngIf="link.description" class="text-muted small mb-0">
+                  {{ link.description }}
+                </p>
               </div>
-              <button class="btn btn-outline-danger btn-sm" (click)="confirmDeleteLink(link.id)" title="Remove Link">
+              <button
+                class="btn btn-outline-danger btn-sm"
+                (click)="confirmDeleteLink(link.id)"
+                title="Remove Link"
+              >
                 <i class="bi bi-trash"></i>
               </button>
             </li>
-            <li *ngIf="links.length === 0" class="list-group-item text-muted">No links added yet.</li>
+            <li *ngIf="links.length === 0" class="list-group-item text-muted">
+              No links added yet.
+            </li>
           </ul>
 
           <h5>Relationships to other Tickets</h5>
@@ -1062,56 +375,85 @@
             <label class="form-label">Relationship Type</label>
             <select class="form-select mb-2" [(ngModel)]="newRelationship.type">
               <option value="">Select Type</option>
-              <option *ngFor="let type of relationshipTypes" [value]="type">{{ type }}</option>
+              <option *ngFor="let type of relationshipTypes" [value]="type">
+                {{ type }}
+              </option>
             </select>
 
             <label class="form-label">Target Ticket</label>
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="Search by title or ID"
-                [(ngModel)]="searchTargetTicketQuery" (ngModelChange)="searchTickets()">
-              <button class="btn btn-secondary" [disabled]="!selectedTargetTicket"
-                (click)="selectedTargetTicket = null; searchTargetTicketQuery = ''">Clear</button>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Search by title or ID"
+                [(ngModel)]="searchTargetTicketQuery"
+                (ngModelChange)="searchTickets()"
+              />
+              <button
+                class="btn btn-secondary"
+                [disabled]="!selectedTargetTicket"
+                (click)="
+                  selectedTargetTicket = null; searchTargetTicketQuery = ''
+                "
+              >
+                Clear
+              </button>
             </div>
             <div class="list-group mt-1" *ngIf="searchTicketResults.length > 0">
-              <button type="button" class="list-group-item list-group-item-action"
-                *ngFor="let result of searchTicketResults" (click)="selectTargetTicket(result)">
+              <button
+                type="button"
+                class="list-group-item list-group-item-action"
+                *ngFor="let result of searchTicketResults"
+                (click)="selectTargetTicket(result)"
+              >
                 #{{ result.sno }} - {{ result.titleTicket }}
               </button>
             </div>
-            <p *ngIf="selectedTargetTicket" class="text-success small mt-2">Selected: #{{ selectedTargetTicket.sno }} -
-              {{ selectedTargetTicket.titleTicket }}</p>
+            <p *ngIf="selectedTargetTicket" class="text-success small mt-2">
+              Selected: #{{ selectedTargetTicket.sno }} -
+              {{ selectedTargetTicket.titleTicket }}
+            </p>
           </div>
 
-          <button class="btn btn-primary mb-3" (click)="addRelationship()"
-            [disabled]="!newRelationship.type || !selectedTargetTicket">Add Relationship</button>
+          <button
+            class="btn btn-primary mb-3"
+            (click)="addRelationship()"
+            [disabled]="!newRelationship.type || !selectedTargetTicket"
+          >
+            Add Relationship
+          </button>
 
           <ul class="list-group">
-            <li class="list-group-item d-flex justify-content-between align-items-center"
-              *ngFor="let rel of relationships">
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center"
+              *ngFor="let rel of relationships"
+            >
               <div>
                 <strong>{{ rel.type }}</strong> &nbsp;
-                <a [routerLink]="['/ticket', rel.targetTicket.sno]"
-                  class="fw-semibold text-decoration-none text-primary">
+                <a
+                  [routerLink]="['/ticket', rel.targetTicket.sno]"
+                  class="fw-semibold text-decoration-none text-primary"
+                >
                   #{{ rel.targetTicket.sno }} - {{ rel.targetTicketTitle }}
                 </a>
               </div>
-              <button class="btn btn-outline-danger btn-sm" (click)="confirmDeleteRelationship(rel.id)"
-                title="Remove Relationship">
+              <button
+                class="btn btn-outline-danger btn-sm"
+                (click)="confirmDeleteRelationship(rel.id)"
+                title="Remove Relationship"
+              >
                 <i class="bi bi-trash"></i>
               </button>
             </li>
-            <li *ngIf="relationships.length === 0" class="list-group-item text-muted">No relationships added yet.</li>
+            <li
+              *ngIf="relationships.length === 0"
+              class="list-group-item text-muted"
+            >
+              No relationships added yet.
+            </li>
           </ul>
         </div>
       </div>
-
-      <div class="border-top mt-4 pt-3">
-        <h6 class="mb-2">Custom Fields</h6>
-        <button class="btn btn-sm btn-outline-secondary">
-          <i class="bi bi-plus"></i> Create Custom Field
-        </button>
-      </div>
-
     </div>
   </div>
 </div>
@@ -1123,27 +465,46 @@
   </div>
 </ng-template>
 
-<div class="modal fade" id="editSubTicketModal" tabindex="-1" aria-labelledby="editSubTicketModalLabel"
-  aria-hidden="true">
+<div
+  class="modal fade"
+  id="editSubTicketModal"
+  tabindex="-1"
+  aria-labelledby="editSubTicketModalLabel"
+  aria-hidden="true"
+>
   <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content border-0 rounded-3 shadow">
       <div class="modal-header bg-primary text-white">
         <h5 class="modal-title" id="editSubTicketModalLabel">Edit Subticket</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
       </div>
       <div class="modal-body">
         <div class="row g-3">
           <div class="col-md-6">
             <label class="form-label">Title</label>
-            <input [(ngModel)]="editingSubTask.title" class="form-control form-control-sm" />
+            <input
+              [(ngModel)]="editingSubTask.title"
+              class="form-control form-control-sm"
+            />
           </div>
           <div class="col-md-6">
             <label class="form-label">Assignee</label>
-            <input [(ngModel)]="editingSubTask.assign" class="form-control form-control-sm" />
+            <input
+              [(ngModel)]="editingSubTask.assign"
+              class="form-control form-control-sm"
+            />
           </div>
           <div class="col-md-6">
             <label class="form-label">Status</label>
-            <select [(ngModel)]="editingSubTask.status" class="form-select form-select-sm">
+            <select
+              [(ngModel)]="editingSubTask.status"
+              class="form-select form-select-sm"
+            >
               <option value="Open">To Do</option>
               <option value="In Progress">In Progress</option>
               <option value="Closed">Completed</option>
@@ -1151,7 +512,10 @@
           </div>
           <div class="col-md-6">
             <label class="form-label">Priority</label>
-            <select [(ngModel)]="editingSubTask.priority" class="form-select form-select-sm">
+            <select
+              [(ngModel)]="editingSubTask.priority"
+              class="form-select form-select-sm"
+            >
               <option value="Low">Low</option>
               <option value="Medium">Medium</option>
               <option value="High">High</option>
@@ -1159,77 +523,167 @@
           </div>
           <div class="col-md-6">
             <label class="form-label">Date</label>
-            <input type="date" [(ngModel)]="editingSubTask.dateCurrent" class="form-control form-control-sm" />
+            <input
+              type="date"
+              [(ngModel)]="editingSubTask.dateCurrent"
+              class="form-control form-control-sm"
+            />
           </div>
           <div class="col-md-12">
             <label class="form-label">Description</label>
-            <textarea [(ngModel)]="editingSubTask.description" rows="2" class="form-control form-control-sm"></textarea>
+            <textarea
+              [(ngModel)]="editingSubTask.description"
+              rows="2"
+              class="form-control form-control-sm"
+            ></textarea>
           </div>
         </div>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
-        <button class="btn btn-primary btn-sm" (click)="updateSubTicket()" data-bs-dismiss="modal">Update</button>
+        <button
+          class="btn btn-outline-secondary btn-sm"
+          data-bs-dismiss="modal"
+        >
+          Cancel
+        </button>
+        <button
+          class="btn btn-primary btn-sm"
+          (click)="updateSubTicket()"
+          data-bs-dismiss="modal"
+        >
+          Update
+        </button>
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal fade" id="deleteSubTicketConfirmModal" tabindex="-1"
-  aria-labelledby="deleteSubTicketConfirmModalLabel" aria-hidden="true">
+<div
+  class="modal fade"
+  id="deleteSubTicketConfirmModal"
+  tabindex="-1"
+  aria-labelledby="deleteSubTicketConfirmModalLabel"
+  aria-hidden="true"
+>
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content border-0 rounded-3 shadow">
       <div class="modal-header bg-danger text-white">
-        <h5 class="modal-title" id="deleteSubTicketConfirmModalLabel">Confirm Deletion</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h5 class="modal-title" id="deleteSubTicketConfirmModalLabel">
+          Confirm Deletion
+        </h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
       </div>
       <div class="modal-body text-center">
         <i class="bi bi-exclamation-triangle fs-2 text-warning"></i>
         <p class="mt-3 mb-0">Are you sure you want to delete this subtask?</p>
       </div>
       <div class="modal-footer justify-content-center">
-        <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
-        <button class="btn btn-danger btn-sm" (click)="deleteSubTicket()" data-bs-dismiss="modal">Delete</button>
+        <button
+          class="btn btn-outline-secondary btn-sm"
+          data-bs-dismiss="modal"
+        >
+          Cancel
+        </button>
+        <button
+          class="btn btn-danger btn-sm"
+          (click)="deleteSubTicket()"
+          data-bs-dismiss="modal"
+        >
+          Delete
+        </button>
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal fade" id="deleteLinkConfirmModal" tabindex="-1" aria-labelledby="deleteLinkConfirmModalLabel"
-  aria-hidden="true">
+<div
+  class="modal fade"
+  id="deleteLinkConfirmModal"
+  tabindex="-1"
+  aria-labelledby="deleteLinkConfirmModalLabel"
+  aria-hidden="true"
+>
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content border-0 rounded-3 shadow">
       <div class="modal-header bg-danger text-white">
-        <h5 class="modal-title" id="deleteLinkConfirmModalLabel">Confirm Link Deletion</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h5 class="modal-title" id="deleteLinkConfirmModalLabel">
+          Confirm Link Deletion
+        </h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
       </div>
       <div class="modal-body text-center">
         <i class="bi bi-exclamation-triangle fs-2 text-warning"></i>
         <p class="mt-3 mb-0">Are you sure you want to delete this link?</p>
       </div>
       <div class="modal-footer justify-content-center">
-        <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
-        <button class="btn btn-danger btn-sm" (click)="deleteLink()" data-bs-dismiss="modal">Delete</button>
+        <button
+          class="btn btn-outline-secondary btn-sm"
+          data-bs-dismiss="modal"
+        >
+          Cancel
+        </button>
+        <button
+          class="btn btn-danger btn-sm"
+          (click)="deleteLink()"
+          data-bs-dismiss="modal"
+        >
+          Delete
+        </button>
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal fade" id="deleteRelationshipConfirmModal" tabindex="-1"
-  aria-labelledby="deleteRelationshipConfirmModalLabel" aria-hidden="true">
+<div
+  class="modal fade"
+  id="deleteRelationshipConfirmModal"
+  tabindex="-1"
+  aria-labelledby="deleteRelationshipConfirmModalLabel"
+  aria-hidden="true"
+>
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content border-0 rounded-3 shadow">
       <div class="modal-header bg-danger text-white">
-        <h5 class="modal-title" id="deleteRelationshipConfirmModalLabel">Confirm Relationship Deletion</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h5 class="modal-title" id="deleteRelationshipConfirmModalLabel">
+          Confirm Relationship Deletion
+        </h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
       </div>
       <div class="modal-body text-center">
         <i class="bi bi-exclamation-triangle fs-2 text-warning"></i>
-        <p class="mt-3 mb-0">Are you sure you want to delete this relationship?</p>
+        <p class="mt-3 mb-0">
+          Are you sure you want to delete this relationship?
+        </p>
       </div>
       <div class="modal-footer justify-content-center">
-        <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
-        <button class="btn btn-danger btn-sm" (click)="deleteRelationship()" data-bs-dismiss="modal">Delete</button>
+        <button
+          class="btn btn-outline-secondary btn-sm"
+          data-bs-dismiss="modal"
+        >
+          Cancel
+        </button>
+        <button
+          class="btn btn-danger btn-sm"
+          (click)="deleteRelationship()"
+          data-bs-dismiss="modal"
+        >
+          Delete
+        </button>
       </div>
     </div>
   </div>

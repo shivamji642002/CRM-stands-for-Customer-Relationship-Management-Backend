@@ -10,5 +10,10 @@ export const appRoutes: Routes = [
     path: 'ticket/:id',
     loadComponent: () =>
       import('./ticket-panel/ticket-panel.component').then(m => m.TicketPanelComponent)
+  },
+  {
+    path: 'subtask/:id',
+    loadComponent: () =>
+      import('./subtask/subtask.component').then(m => m.SubtaskComponent)
   }
 ];
